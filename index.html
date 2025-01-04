@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de emagrecimeno - FitPro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./007ad1a103f67e2d701412139f61bed3c61643d70c2b27b7853026d7882c4934-removebg-preview.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./007ad1a103f67e2d701412139f61bed3c61643d70c2b27b7853026d7882c4934-removebg-preview.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FitPro Academy</div>
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="https://wa.me/5519993715667" target="_blank" class="contato-whats">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Transforme seu corpo e sua vida</h1>
+            <p>Aprenda diversas técnicas para melhorar a sua saúde</p>
+            <button onclick="copiarPix()" class="cta-button">Copiar Chave PIX</button>
+            <span id="mensagem-copiado" class="mensagem-copiado">PIX copiado com sucesso!</span>
+        </section>
+    </main>
+
+    <script>
+    function copiarPix() {
+        const pix = "00020101021126330014br.gov.bcb.pix011149556818839520400005303986540510.005802BR5916JOAO R F R ROCHA6008CAMPINAS62070503***63041D7E";
+        
+        navigator.clipboard.writeText(pix).then(function() {
+            const mensagem = document.getElementById('mensagem-copiado');
+            mensagem.style.opacity = '1';
+            
+            setTimeout(function() {
+                mensagem.style.opacity = '0';
+            }, 2000);
+        }).catch(function() {
+            alert('Erro ao copiar o PIX. Por favor, tente novamente.');
+        });
+    }
+    </script>
+</body>
+</html> 
